@@ -1,0 +1,121 @@
+import styled from 'styled-components';
+import { COLORS, QUERIES } from '../constants';
+
+const technologies = [
+  {
+    name: 'React',
+    alt: 'React Logo',
+    logoSrc: 'img/logos/logo-react.svg',
+  },
+  {
+    name: 'JavaScript',
+    alt: 'JavaScript Logo',
+    logoSrc: 'img/logos/logo-js.svg',
+  },
+  {
+    name: 'Node.js',
+    alt: 'Node.js Logo',
+    logoSrc: 'img/logos/logo-nodejs.svg',
+  },
+  {
+    name: 'CSS',
+    alt: 'CSS Logo',
+    logoSrc: 'img/logos/logo-css.svg',
+  },
+  {
+    name: 'HTML',
+    alt: 'HTML Logo',
+    logoSrc: 'img/logos/logo-html.svg',
+  },
+  {
+    name: 'Github',
+    alt: 'Github Logo',
+    logoSrc: 'img/logos/logo-github.svg',
+  },
+  {
+    name: 'Next.js',
+    alt: 'Next.js Logo',
+    logoSrc: 'img/logos/logo-next.svg',
+  },
+  {
+    name: 'Styled Components',
+    alt: 'Styled Components Logo',
+    logoSrc: 'img/logos/logo-styled-components.svg',
+  },
+  {
+    name: 'Python',
+    alt: 'Python Logo',
+    logoSrc: 'img/logos/logo-python.svg',
+  },
+  {
+    name: 'Git',
+    alt: 'Git Logo',
+    logoSrc: 'img/logos/logo-git.svg',
+  },
+  {
+    name: 'Figma',
+    alt: 'Figma Logo',
+    logoSrc: 'img/logos/logo-figma.svg',
+  },
+  {
+    name: 'Photoshop',
+    alt: 'Photoshop Logo',
+    logoSrc: 'img/logos/logo-photoshop.svg',
+  },
+  {
+    name: 'Illustrator',
+    alt: 'Illustrator Logo',
+    logoSrc: 'img/logos/logo-illustrator.svg',
+  },
+]
+
+function KeywordsContainer() {
+  return (
+    <Keywords>
+      { 
+        technologies.map((tech) => (
+          <Keyword key={tech.name}>
+            <Logo src={tech.logoSrc} alt={tech.alt} />
+            <Title>{tech.name}</Title>
+          </Keyword> 
+        ))
+      }
+    </Keywords>
+  )
+}
+
+const Keywords = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 60%;
+  border: 8px dotted ${COLORS.primary};
+  border-radius: 25px;
+  padding: 32px;
+
+`;
+
+const Keyword = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 20%;
+`;
+
+const Title = styled.h3`
+  font-size: 1.25rem;
+  text-align: center;
+
+  @media ${QUERIES.laptopAndSmaller} {
+    font-size: 1rem;
+  }
+`;
+
+const Logo = styled.img`
+  height: 40%;
+`;
+
+export default KeywordsContainer;
