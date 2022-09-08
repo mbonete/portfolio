@@ -89,33 +89,35 @@ const Keywords = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 60%;
+  height: fit-content;
   border: 8px dotted ${COLORS.primary};
   border-radius: 25px;
   padding: 32px;
+  gap: 16px;
 
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 16px;
+    gap: 8px;
+  }
 `;
 
 const Keyword = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 30%;
-  width: 20%;
+  justify-content: space-evenly;
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
 `;
 
 const Title = styled.h3`
   font-size: 1.25rem;
   text-align: center;
-
-  @media ${QUERIES.laptopAndSmaller} {
-    font-size: 1rem;
-  }
+  overflow-wrap: normal;
 `;
 
 const Logo = styled.img`
-  height: 40%;
+  height: 80px;
 `;
 
 export default KeywordsContainer;

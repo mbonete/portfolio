@@ -32,7 +32,11 @@ const Wrapper = styled.div`
   };
 
   @media ${QUERIES.tabletAndSmaller} {
-    height: 500px;
+    height: 550px;
+  }
+
+  @media ${QUERIES.phoneAndSmaller} {
+    height: 400px;
   }
 `;
 
@@ -43,6 +47,7 @@ const MaxWidthWrapper = styled.div`
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+
   @media ${QUERIES.desktopAndSmaller} {
     max-width: 1100px;
   }
@@ -50,8 +55,13 @@ const MaxWidthWrapper = styled.div`
     max-width: 900px;
   }
   @media ${QUERIES.tabletAndSmaller} {
+    padding: 8px 64px;
     height: 500px;
-    padding: 16px;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    display: flex;
+    justify-content: center;
+    padding: 0 48px 100px 48px;
   }
 `;
 
@@ -64,6 +74,7 @@ const Title = styled.h1`
   &::first-letter {
     color: ${COLORS.primary};
     font-weight: 900;
+    font-size: 4.5rem;
     text-shadow: 6px 0 black;
     margin-right: 4px;
   }
@@ -74,12 +85,14 @@ const Title = styled.h1`
   }
 
   @media ${QUERIES.tabletAndSmaller} {
-    font-size: 3rem;
-    margin: 32px;
+    font-size: 2.8rem;
+    max-width: 10ch;
+    margin-top: 32px;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-
+    max-width: 15ch;
+    text-align: center;
     &::first-letter {
       text-shadow: 4px 0 black;
     }
@@ -100,9 +113,9 @@ const ButtonSection = styled.div`
 
 const Wave = styled.img`
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   width: 100%;
-  min-height: 400px;
+  min-height: 380px;
   object-fit: cover;
   object-position: right;
 
@@ -110,6 +123,9 @@ const Wave = styled.img`
     object-position: left;
   }
 
+  @media ${QUERIES.phoneAndSmaller} {
+    min-height: 150px;
+  }
 `;
 
 
