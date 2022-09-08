@@ -10,7 +10,7 @@ function Header() {
         <ButtonSection>
           <LinkButton href='files/Cv-MariaBonete.pdf' download='Cv-MariaBonete.pdf'>Download CV</LinkButton>
           <LinkButton href='https://github.com/mbonete'>Github</LinkButton>
-          <LinkButton href='https://www.linkedin.com/in/maria-bonete/'>LinkedIn</LinkButton>
+          <LinkButton href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
         </ButtonSection>
       </MaxWidthWrapper>
       <Wave src='img/group.svg' alt='' />  
@@ -101,6 +101,7 @@ const Title = styled.h1`
 
 const ButtonSection = styled.div`
   display: flex;
+  z-index: 3;
 
   @media ${QUERIES.laptopAndSmaller} {
     flex-direction: column;

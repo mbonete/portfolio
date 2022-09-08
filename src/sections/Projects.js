@@ -136,13 +136,13 @@ const ProjectLinkTitle = styled.a`
 
 const Source = styled(ProjectLinkTitle)`
   font-size: 1.85rem;
-  font-weight: 400;
+  font-weight: 600;
   justify-content: center;
   gap: 8px;
   border: 2px solid ${COLORS.primary};
   border-radius: 50px;
   width: fit-content;
-  padding: 8px 16px;
+  padding: 16px 24px;
 `;
 
 const Introduction = styled.h3`
