@@ -16,7 +16,7 @@ function App() {
 
 const Wrapper = styled.div `
   min-height: 100%;
-  min-width: 400px;
+  min-width: 300px;
   position: relative;
 `;
 
