@@ -9,7 +9,6 @@ function Subtitle({children}) {
 
 const Title = styled.h2`
   font-size: 3rem;
-  padding: 16px 0;
 
   &::first-letter {
     color: ${COLORS.primary};
