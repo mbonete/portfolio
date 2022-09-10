@@ -3,6 +3,7 @@ import {
   ExternalLink,
   Music,
   Volume2,
+  GitHub,
 } from 'react-feather';
 import Subtitle from '../components/Subtitle';
 import { QUERIES, COLORS } from '../constants';
@@ -19,8 +20,7 @@ function Projects() {
             <Music color={COLORS.purpleBlue} size={80}/>
           </IconWrapper>
           <Source href='https://github.com/mbonete/guess-the-bpm' target='_blank'>
-              Github source 
-              <ExternalLink />
+              <GitHub size={'clamp(30px, 2vw, 50px)'} fontWeight={700}/>
           </Source>
         </Side>
 
@@ -93,6 +93,7 @@ const Side = styled.div`
   justify-content: space-between;
   @media ${QUERIES.tabletAndSmaller} {
     grid-area: title;
+    align-items: center;
   }
 `;
 
@@ -132,17 +133,24 @@ const ProjectLinkTitle = styled.a`
   font-size: 2.25rem;
   color: ${COLORS.primary};
   font-weight: 900;
+
+  &:hover {
+    text-decoration: revert;
+  }
 `;
 
-const Source = styled(ProjectLinkTitle)`
-  font-size: 1.85rem;
-  font-weight: 600;
-  justify-content: center;
-  gap: 8px;
-  border: 2px solid ${COLORS.primary};
-  border-radius: 50px;
+const Source = styled.a`
+  text-decoration: none;
+  color: ${COLORS.primary};
+  border: 3px solid ${COLORS.primary};
+  border-radius: 15px;
   width: fit-content;
-  padding: 16px 24px;
+  padding: 8px;
+
+  &:hover {
+    color: revert;
+    background-color: revert;
+  }
 `;
 
 const Introduction = styled.h3`

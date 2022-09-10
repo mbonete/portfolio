@@ -97,7 +97,6 @@ const Keywords = styled.div`
 
   @media ${QUERIES.tabletAndSmaller} {
     padding: 16px;
-    gap: 8px;
   }
 `;
 
@@ -106,18 +105,18 @@ const Keyword = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   height: 150px;
-  width: 100px;
+  width: clamp(70px, 10vw, 100px);
   object-fit: cover;
 `;
 
 const Title = styled.h3`
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   text-align: center;
   overflow-wrap: normal;
 `;
 
 const Logo = styled.img`
-  height: 80px;
+  height: clamp(40px, 15vw, 80px);
 `;
 
 export default KeywordsContainer;

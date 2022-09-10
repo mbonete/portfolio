@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import LinkButton from '../components/LinkButton';
+import { Menu } from 'react-feather';
 import { COLORS, QUERIES } from '../constants';
 
 function Header() {
@@ -7,6 +8,10 @@ function Header() {
     <Wrapper>
       <MaxWidthWrapper>
         <Title>Maria Bonete Front-end Developer</Title>
+        <IconWrapper>
+          <Menu size={50}/>
+        </IconWrapper>
+        
         <ButtonSection>
           <LinkButton href='files/Cv-MariaBonete.pdf' download='Cv-MariaBonete.pdf'>Download CV</LinkButton>
           <LinkButton href='https://github.com/mbonete'>Github</LinkButton>
@@ -60,8 +65,7 @@ const MaxWidthWrapper = styled.div`
   }
   @media ${QUERIES.phoneAndSmaller} {
     display: flex;
-    justify-content: center;
-    padding: 0 48px 100px 48px;
+    padding: 0 48px 150px 48px;
   }
 `;
 
@@ -91,11 +95,25 @@ const Title = styled.h1`
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    max-width: 15ch;
-    text-align: center;
+    max-width: 10ch;
+    font-size: clamp(2.4rem, 4.5vw, 2.8rem);
     &::first-letter {
+      font-size: inherit;
+      font-weight: revert;
       text-shadow: 4px 0 black;
     }
+  }
+`;
+
+const IconWrapper = styled.div`
+  display: none;
+
+  @media ${QUERIES.phoneAndSmaller} {
+    display: revert;
+    position: absolute;
+    top: 40px;
+    right: 32px;
+    min-width: 55px;
   }
 `;
 

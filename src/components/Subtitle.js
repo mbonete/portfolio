@@ -8,7 +8,7 @@ function Subtitle({children}) {
 }
 
 const Title = styled.h2`
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
 
   &::first-letter {
     color: ${COLORS.primary};
@@ -16,14 +16,6 @@ const Title = styled.h2`
     font-size: 3.15rem;
     text-shadow: 4px 0 black;
     margin-right: 4px;
-  }
-
-  @media ${QUERIES.laptopAndSmaller} {
-    font-size: 2.4rem;
-  }
-
-  @media ${QUERIES.tabletAndSmaller} {
-    font-size: 2.25rem;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
