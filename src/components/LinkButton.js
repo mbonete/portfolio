@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import { COLORS } from '../constants';
 
-function LinkButton ({children, href, download = null}) {
+function LinkButton ({children, href, download = null, menu = 'desktop'}) {
+
+  let Button = menu === 'mobile' ? MobileMenuButton : DesktopButton;
+
   return (
     <Button href={href} download={download} target="_blank">{children}</Button>
   )
 }
 
-const Button = styled.a`
+const DesktopButton = styled.a`
   min-width: 210px;
   margin: 16px;
   text-align: center;
@@ -21,6 +24,13 @@ const Button = styled.a`
   &:hover {
     text-decoration: revert;
   }
+`;
+
+const MobileMenuButton = styled(DesktopButton)`
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: ${COLORS.primary};
+  text-transform: uppercase;
 `;
 
 export default LinkButton;

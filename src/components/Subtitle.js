@@ -13,7 +13,7 @@ const Title = styled.h2`
   &::first-letter {
     color: ${COLORS.primary};
     font-weight: 900;
-    font-size: 3.15rem;
+    font-size: clamp(2rem, 5vw, 3.15rem);
     text-shadow: 4px 0 black;
     margin-right: 4px;
   }

@@ -1,16 +1,18 @@
 import styled from 'styled-components';
-import LinkButton from '../components/LinkButton';
 import { Menu } from 'react-feather';
 import { COLORS, QUERIES } from '../constants';
+import LinkButton from '../components/LinkButton';
+import HamburguerMenu from '../components/HamburguerMenu';
 
 function Header() {
   return (
     <Wrapper>
       <MaxWidthWrapper>
         <Title>Maria Bonete Front-end Developer</Title>
-        <IconWrapper>
+        <HamburguerMenuWrapper>
           <Menu size={50}/>
-        </IconWrapper>
+          <HamburguerMenu />
+        </HamburguerMenuWrapper>
         
         <ButtonSection>
           <LinkButton href='files/Cv-MariaBonete.pdf' download='Cv-MariaBonete.pdf'>Download CV</LinkButton>
@@ -105,7 +107,7 @@ const Title = styled.h1`
   }
 `;
 
-const IconWrapper = styled.div`
+const HamburguerMenuWrapper = styled.div`
   display: none;
 
   @media ${QUERIES.phoneAndSmaller} {
