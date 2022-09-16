@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    height: 400px;
+    height: 300px;
   }
 `;
 
@@ -96,7 +96,7 @@ const Title = styled.h1`
 
   @media ${QUERIES.phoneAndSmaller} {
     max-width: 10ch;
-    font-size: clamp(2.4rem, 4.5vw, 2.8rem);
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
     &::first-letter {
       font-size: inherit;
       font-weight: revert;
@@ -114,6 +114,7 @@ const IconWrapper = styled.div`
     top: 40px;
     right: 32px;
     min-width: 55px;
+    cursor: pointer;
   }
 `;
 

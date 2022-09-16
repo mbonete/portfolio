@@ -38,11 +38,6 @@ const technologies = [
     logoSrc: 'img/logos/logo-next.svg',
   },
   {
-    name: 'Styled Components',
-    alt: 'Styled Components Logo',
-    logoSrc: 'img/logos/logo-styled-components.svg',
-  },
-  {
     name: 'Python',
     alt: 'Python Logo',
     logoSrc: 'img/logos/logo-python.svg',
@@ -66,6 +61,11 @@ const technologies = [
     name: 'Illustrator',
     alt: 'Illustrator Logo',
     logoSrc: 'img/logos/logo-illustrator.svg',
+  },
+  {
+    name: 'Styled Components',
+    alt: 'Styled Components Logo',
+    logoSrc: 'img/logos/logo-styled-components.svg',
   },
 ]
 
@@ -96,7 +96,7 @@ const Keywords = styled.div`
   gap: 16px;
 
   @media ${QUERIES.tabletAndSmaller} {
-    padding: 16px;
+    padding: 8px;
   }
 `;
 
@@ -105,18 +105,18 @@ const Keyword = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   height: 150px;
-  width: clamp(70px, 10vw, 100px);
+  width: clamp(50px, 15vw, 100px);
   object-fit: cover;
 `;
 
 const Title = styled.h3`
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(0.85rem, 2.5vw, 1.25rem);
   text-align: center;
   overflow-wrap: normal;
 `;
 
 const Logo = styled.img`
-  height: clamp(40px, 15vw, 80px);
+  height: clamp(45px, 15vw, 80px);
 `;
 
 export default KeywordsContainer;
