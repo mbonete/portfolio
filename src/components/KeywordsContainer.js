@@ -48,6 +48,11 @@ const technologies = [
     logoSrc: 'img/logos/logo-git.svg',
   },
   {
+    name: 'React Hook Form',
+    alt: 'React Hook Form Logo',
+    logoSrc: 'img/logos/logo-react-hook-form.png',
+  },
+  {
     name: 'Figma',
     alt: 'Figma Logo',
     logoSrc: 'img/logos/logo-figma.svg',
@@ -67,6 +72,7 @@ const technologies = [
     alt: 'Styled Components Logo',
     logoSrc: 'img/logos/logo-styled-components.svg',
   },
+
 ]
 
 function KeywordsContainer() {
@@ -117,6 +123,8 @@ const Title = styled.h3`
 
 const Logo = styled.img`
   height: clamp(45px, 15vw, 80px);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 `;
 
 export default KeywordsContainer;
