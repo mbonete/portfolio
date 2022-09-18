@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 import { Menu } from 'react-feather';
+import { useState } from 'react';
 import { COLORS, QUERIES } from '../constants';
 import LinkButton from '../components/LinkButton';
-import HamburguerMenu from '../components/HamburguerMenu';
+import HamburguerMenuModal from '../components/HamburguerMenuModal';
 
 function Header() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <Wrapper>
       <MaxWidthWrapper>
         <Title>Maria Bonete Front-end Developer</Title>
         <HamburguerMenuWrapper>
-          <Menu size={50}/>
-          <HamburguerMenu />
+          <Menu size={50} onClick={() => setShowMobileMenu(true)}/>
+          <HamburguerMenuModal 
+            isOpen={showMobileMenu} 
+            onClose={() => setShowMobileMenu(false)}
+          />
         </HamburguerMenuWrapper>
         
         <ButtonSection>
