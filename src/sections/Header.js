@@ -31,7 +31,7 @@ function Header() {
         </ButtonSection>
       </MaxWidthWrapper>
       <Wave src='img/group.svg' alt='' />  
-      <Illustration src='img/plantsCare.svg' />
+      <Illustration src='img/happy.svg' />
       <SmallIllustration src='img/gato.svg'/>
 
     </Wrapper>
@@ -171,13 +171,11 @@ const Wave = styled.img`
 
 const Illustration = styled.img`
   position: absolute;
-  bottom: -50px;
-  right: 0px;
-  height: 85%;
+  bottom: 10px;
+  right: 100px;
+  height: 55%;
 
-  @media ${QUERIES.desktopAndSmaller} {
-    height: 95%;
-  }
+
   @media ${QUERIES.laptopAndSmaller} {
     display: none;
   }
@@ -188,10 +186,8 @@ const SmallIllustration = styled.img`
   bottom: 0px;
   right: 0px;
   height: 25%;
+  display: none;
 
-  @media ${QUERIES.desktopAndSmaller} {
-    display: none;
-  }
   @media ${QUERIES.laptopAndSmaller} {
     display: revert;
   }
