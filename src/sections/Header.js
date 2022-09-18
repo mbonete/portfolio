@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Menu } from 'react-feather';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { COLORS, QUERIES } from '../constants';
 import LinkButton from '../components/LinkButton';
 import HamburguerMenuModal from '../components/HamburguerMenuModal';
@@ -32,6 +32,7 @@ function Header() {
       </MaxWidthWrapper>
       <Wave src='img/group.svg' alt='' />  
       <Illustration src='img/plantsCare.svg' />
+      <SmallIllustration src='img/gato.svg'/>
 
     </Wrapper>
   );
@@ -179,6 +180,20 @@ const Illustration = styled.img`
   }
   @media ${QUERIES.laptopAndSmaller} {
     display: none;
+  }
+`;
+
+const SmallIllustration = styled.img`
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 25%;
+
+  @media ${QUERIES.desktopAndSmaller} {
+    display: none;
+  }
+  @media ${QUERIES.laptopAndSmaller} {
+    display: revert;
   }
 `;
 
