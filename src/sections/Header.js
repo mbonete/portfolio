@@ -10,9 +10,13 @@ function Header() {
   return (
     <Wrapper>
       <MaxWidthWrapper>
-        <Title>Maria Bonete Front-end Developer</Title>
+        <TitleSection>
+          <Title>Maria Bonete</Title>
+          <Subtitle>Front-end Developer</Subtitle>
+        </TitleSection>
+      
         <HamburguerMenuWrapper>
-          <Menu size={50} onClick={() => setShowMobileMenu(true)}/>
+          <Menu size={40} onClick={() => setShowMobileMenu(true)}/>
           <HamburguerMenuModal 
             isOpen={showMobileMenu} 
             onClose={() => setShowMobileMenu(false)}
@@ -32,7 +36,7 @@ function Header() {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   isolation: isolate;
   position: relative;
   height: 650px;
@@ -76,10 +80,13 @@ const MaxWidthWrapper = styled.div`
   }
 `;
 
+const TitleSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Title = styled.h1`
-  position: relative;
-  font-size: 3.9rem;
-  max-width: 13ch;
+  font-size: clamp(2rem, 6vw, 3.9rem);
   margin-top: 80px;
 
   &::first-letter {
@@ -91,24 +98,28 @@ const Title = styled.h1`
   }
 
   @media ${QUERIES.laptopAndSmaller} {
-    font-size: 3.4rem;
     margin-top: 100px;
   }
 
   @media ${QUERIES.tabletAndSmaller} {
-    font-size: 2.8rem;
     max-width: 10ch;
     margin-top: 32px;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    max-width: 10ch;
-    font-size: clamp(2rem, 4.5vw, 2.8rem);
     &::first-letter {
       font-size: inherit;
       font-weight: revert;
       text-shadow: 4px 0 black;
     }
+  }
+`;
+const Subtitle = styled.h2`
+  color: ${COLORS.gray};
+  font-size: clamp(2rem, 6vw, 3.7rem);
+  font-weight: 400;
+  @media ${QUERIES.phoneAndSmaller}{
+    max-width: 10ch;
   }
 `;
 
