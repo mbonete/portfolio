@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { Menu } from 'react-feather';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { COLORS, QUERIES } from '../constants';
 import LinkButton from '../components/LinkButton';
 import HamburguerMenuModal from '../components/HamburguerMenuModal';
 
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   return (
     <Wrapper>
       <MaxWidthWrapper>

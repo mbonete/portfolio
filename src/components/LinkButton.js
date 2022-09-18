@@ -27,7 +27,7 @@ const DesktopButton = styled.a`
 `;
 
 const MobileMenuButton = styled(DesktopButton)`
-  font-size: 1.25rem;
+  font-size: 1rem;
   background-color: transparent;
   color: ${COLORS.primary};
   text-transform: uppercase;

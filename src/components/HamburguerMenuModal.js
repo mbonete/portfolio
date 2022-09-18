@@ -4,6 +4,8 @@ import { COLORS } from '../constants';
 import LinkButton from './LinkButton';
 
 function HamburguerMenuModal ({isOpen, onClose}) {
+  ReactModal.setAppElement('#root');
+
   return (
     <ReactModal 
       isOpen={isOpen} 
@@ -11,36 +13,21 @@ function HamburguerMenuModal ({isOpen, onClose}) {
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       shouldReturnFocusAfterClose={true}
-      style={{
-        overlay: {
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(255, 255, 255, 0.75)'
-        },
-        content: {
-          position: 'fixed',
-          inset: '0px 0px 0px auto',
-          height: '100%',
-          width: '80%',
-          backgroundColor: `${COLORS.sandYellow}`,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: 0,
-        }
-      }}
+      className="_"
+      overlayClassName="_"
+      contentElement={(props, children) => <ModalStyle {...props}>{children}</ModalStyle>}
+      overlayElement={(props, contentElement) => <OverlayStyle {...props}>{contentElement}</OverlayStyle>} 
     >
         <Header>
           <Title>Menu</Title>
         </Header>
-          
-          <LinkButton menu= 'mobile' href='files/Cv-MariaBonete.pdf' download='Cv-MariaBonete.pdf'>Download CV</LinkButton>
-          <LinkButton menu= 'mobile' href='https://github.com/mbonete'>Github</LinkButton>
-          <LinkButton menu= 'mobile' href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
+
+          <LinkSection>
+            <LinkButton menu= 'mobile' href='files/Cv-MariaBonete.pdf' download='Cv-MariaBonete.pdf'>Download CV</LinkButton>
+            <LinkButton menu= 'mobile' href='https://github.com/mbonete'>Github</LinkButton>
+            <LinkButton menu= 'mobile' href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
+          </LinkSection>
+        
         <Footer>
           <Text> Made with love from Spain. Maria Bonete Salmeron</Text>
         </Footer>
@@ -48,8 +35,46 @@ function HamburguerMenuModal ({isOpen, onClose}) {
   )
 }
 
+const ModalStyle = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 70%;
+  width: 80%;
+  background-color: ${COLORS.sandYellow};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  outline: transparent;
 
-const Header = styled.header`
+  @media screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+`;
+
+const OverlayStyle = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(100, 100, 100, 0.75);
+
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+`
+
+const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,17 +84,22 @@ const Header = styled.header`
 `;
 
 const Title = styled.p`
-  font-size: 1.85rem;
-  color: ${COLORS.primary};
+  font-size: 1.25rem;
   text-align: center;
-  padding: 16px;
+  padding: 8px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 4px;
 `;
 
+const LinkSection = styled.div`
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 const Footer = styled(Header)`
-  background-color: ${COLORS.sandYellow};
   border-top: 4px solid ${COLORS.sandBrown};
 `;
 
