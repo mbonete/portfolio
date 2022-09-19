@@ -184,7 +184,7 @@ const Illustration = styled.img`
 const SmallIllustration = styled.img`
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  right: 20px;
   height: 25%;
   display: none;
 
