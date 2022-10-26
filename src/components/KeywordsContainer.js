@@ -48,6 +48,11 @@ const technologies = [
     logoSrc: 'img/logos/logo-git.svg',
   },
   {
+    name: 'React Query',
+    alt: 'React Query Logo',
+    logoSrc: 'img/logos/logo-react-query.svg',
+  },
+  {
     name: 'React Hook Form',
     alt: 'React Hook Form Logo',
     logoSrc: 'img/logos/logo-react-hook-form.png',
