@@ -24,9 +24,9 @@ function Projects() {
           </Source>
         </Side>
 
-        <ProjectContainer>
-          <SVG src='img/ellipse.svg' alt=''/>
-          <SVG src='img/mobileSvg.svg' alt='A mobile showing the Guess The BPM project'/>
+        <ProjectContainer href='https://www.guess-the-bpm.com/' target='_blank' rel="noreferrer">
+          <SVG src='img/ellipse.svg' alt='' draggable={false}/>
+          <SVG src='img/mobileSvg.svg' alt='A mobile showing the Guess The BPM project' draggable={false}/>
         </ProjectContainer>
 
         <ProjectDisclosed>
@@ -42,7 +42,7 @@ function Projects() {
         
 
       </MaxWidthWrapper>
-      <Wave src='img/mustardWave.svg' alt='' />
+      <Wave src='img/mustardWave.svg' alt='' draggable={false} />
     </Wrapper>
   );
 }
@@ -158,7 +158,7 @@ const Introduction = styled.h3`
   line-height: 2.5;
 `;
 
-const ProjectContainer = styled.div`
+const ProjectContainer = styled.a`
   position: relative;
   height: 100%;
   width: 100%;
@@ -175,6 +175,11 @@ const SVG = styled.img`
   top: 0;
   height: 100%;
   max-height: fit-content;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 `;
 
 const Wave = styled.img`
@@ -184,5 +189,10 @@ const Wave = styled.img`
   min-height: 110px;
   object-fit: cover;
   object-position: center;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 `;
 export default Projects;

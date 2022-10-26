@@ -30,9 +30,9 @@ function Header() {
           <LinkButton href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
         </ButtonSection>
       </MaxWidthWrapper>
-      <Wave src='img/group.svg' alt='' />  
-      <Illustration src='img/happy.svg' />
-      <SmallIllustration src='img/gato.svg'/>
+      <Wave src='img/group.svg' alt=''  draggable={false} />  
+      <Illustration src='img/happy.svg' alt='Illustration of a girl working with a computer and a cat' draggable={false} />
+      <SmallIllustration src='img/gato.svg'  alt='Illustration of a cat laying comfortably'draggable={false}/>
 
     </Wrapper>
   );
@@ -85,6 +85,7 @@ const MaxWidthWrapper = styled.div`
 const TitleSection = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 1;
 `;
 
 const Title = styled.h1`
@@ -158,6 +159,11 @@ const Wave = styled.img`
   min-height: 380px;
   object-fit: cover;
   object-position: right;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 
   @media ${QUERIES.laptopAndSmaller} {
     object-position: left;
@@ -174,6 +180,11 @@ const Illustration = styled.img`
   bottom: 10px;
   right: 100px;
   height: 55%;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 
 
   @media ${QUERIES.laptopAndSmaller} {
@@ -187,6 +198,12 @@ const SmallIllustration = styled.img`
   right: 20px;
   height: 25%;
   display: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  
 
   @media ${QUERIES.laptopAndSmaller} {
     display: revert;
