@@ -25,7 +25,7 @@ function Header() {
         </HamburguerMenuWrapper>
         
         <ButtonSection>
-          <LinkButton href='files/Cv-MariaBonete.pdf' download='Cv-MariaBonete.pdf'>Download CV</LinkButton>
+          <LinkButton href='files/cv-maria-bonete.pdf' download='cv-maria-bonete.pdf'>Download CV</LinkButton>
           <LinkButton href='https://github.com/mbonete'>Github</LinkButton>
           <LinkButton href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
         </ButtonSection>
