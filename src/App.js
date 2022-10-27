@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Footer from './sections/Footer';
 import Header from './sections/Header';
 import Keywords from './sections/Keywords';
 import Projects from './sections/Projects';
@@ -9,6 +10,7 @@ function App() {
       <Header/> 
       <Keywords />
       <Projects />
+      <Footer />
     </Wrapper>
   );
 }

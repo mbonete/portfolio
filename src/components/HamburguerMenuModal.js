@@ -29,7 +29,7 @@ function HamburguerMenuModal ({isOpen, onClose}) {
           </LinkSection>
         
         <Footer>
-          <Text> Made with love from Spain. Maria Bonete Salmeron</Text>
+          <Text> Made with love from Spain. Maria Bonete</Text>
         </Footer>
     </ReactModal>
   )
@@ -80,7 +80,7 @@ const Header = styled.div`
   justify-content: center;
   height: 20%;
   width: 100%;
-  background-color: ${COLORS.sandBrown}
+  background-color: ${COLORS.sandBrown};
 `;
 
 const Title = styled.p`

@@ -53,7 +53,7 @@ const Wrapper = styled.div `
   position: relative;
   height: fit-content;
   background-color: ${COLORS.mustardYellow};
-
+  padding-bottom: 16px;
 `;
 const MaxWidthWrapper = styled.div`
   display: grid;
