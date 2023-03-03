@@ -17,7 +17,10 @@ function Header() {
         </TitleSection>
       
         <HamburguerMenuWrapper>
-          <Menu size={40} onClick={() => setShowMobileMenu(true)}/>
+          <MenuButton onClick={() => setShowMobileMenu(true)}>
+            <Menu size={40} />
+          </MenuButton>
+          
           <HamburguerMenuModal 
             isOpen={showMobileMenu} 
             onClose={() => setShowMobileMenu(false)}
@@ -138,6 +141,11 @@ const HamburguerMenuWrapper = styled.div`
     cursor: pointer;
   }
 `;
+
+const MenuButton = styled.button`
+  background-color: transparent;
+  border: transparent;
+`
 
 const ButtonSection = styled.div`
   display: flex;

@@ -66,7 +66,7 @@ const OverlayStyle = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(100, 100, 100, 0.75);
+  background-color: hsl(0, 0%, 33%, 50%);
 
   @media screen and (min-width: 600px) {
     display: none;
