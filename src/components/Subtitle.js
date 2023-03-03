@@ -9,7 +9,7 @@ function Subtitle({children}) {
 
 const Title = styled.h2`
   font-size: clamp(1.25rem, 4.5vw, 3rem);
-
+  line-height: 2;
   &::first-letter {
     color: ${COLORS.primary};
     font-weight: 900;
