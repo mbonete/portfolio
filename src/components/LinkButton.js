@@ -20,6 +20,9 @@ const DesktopButton = styled.a`
   font-size: 1.5rem;
   border-radius: 50px;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     text-decoration: revert;
@@ -27,7 +30,7 @@ const DesktopButton = styled.a`
 `;
 
 const MobileMenuButton = styled(DesktopButton)`
-  font-size: 1rem;
+  font-size: 1.15rem;
   background-color: transparent;
   color: ${COLORS.primary};
   text-transform: uppercase;

@@ -138,13 +138,13 @@ const HamburguerMenuWrapper = styled.nav`
     top: 40px;
     right: 32px;
     min-width: 55px;
-    cursor: pointer;
   }
 `;
 
 const MenuButton = styled.button`
   background-color: transparent;
   border: transparent;
+  cursor: pointer;
 `
 
 const ButtonSection = styled.div`
