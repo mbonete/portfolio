@@ -16,7 +16,7 @@ function Header() {
           <Subtitle>Front-end Developer</Subtitle>
         </TitleSection>
       
-        <HamburguerMenuWrapper>
+        <HamburguerMenuWrapper role="navigation" aria-label="Main menu">
           <MenuButton onClick={() => setShowMobileMenu(true)}>
             <Menu size={40} />
           </MenuButton>
@@ -129,7 +129,7 @@ const Subtitle = styled.h2`
   }
 `;
 
-const HamburguerMenuWrapper = styled.div`
+const HamburguerMenuWrapper = styled.nav`
   display: none;
 
   @media ${QUERIES.phoneAndSmaller} {

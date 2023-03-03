@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ReactModal from 'react-modal';
 import { COLORS } from '../constants';
 import LinkButton from './LinkButton';
+import { VisuallyHidden } from "@reach/visually-hidden";
 
 function HamburguerMenuModal ({isOpen, onClose}) {
   ReactModal.setAppElement('#root');
@@ -18,6 +19,8 @@ function HamburguerMenuModal ({isOpen, onClose}) {
       contentElement={(props, children) => <ModalStyle {...props}>{children}</ModalStyle>}
       overlayElement={(props, contentElement) => <OverlayStyle {...props}>{contentElement}</OverlayStyle>} 
     >
+        <VisuallyHidden>Modal menu open</VisuallyHidden>
+
         <Header>
           <Title>Menu</Title>
         </Header>
