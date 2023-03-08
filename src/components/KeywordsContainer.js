@@ -53,9 +53,19 @@ const technologies = [
     logoSrc: 'img/logos/logo-react-query.svg',
   },
   {
+    name: 'SWR',
+    alt: 'SWR Logo',
+    logoSrc: 'img/logos/logo-swr.png'
+  },
+  {
     name: 'React Hook Form',
     alt: 'React Hook Form Logo',
     logoSrc: 'img/logos/logo-react-hook-form.png',
+  },
+  {
+    name: 'Styled Components',
+    alt: 'Styled Components Logo',
+    logoSrc: 'img/logos/logo-styled-components.svg',
   },
   {
     name: 'Figma',
@@ -71,11 +81,6 @@ const technologies = [
     name: 'Illustrator',
     alt: 'Illustrator Logo',
     logoSrc: 'img/logos/logo-illustrator.svg',
-  },
-  {
-    name: 'Styled Components',
-    alt: 'Styled Components Logo',
-    logoSrc: 'img/logos/logo-styled-components.svg',
   },
 
 ]
