@@ -29,7 +29,7 @@ function HamburguerMenuModal ({isOpen, onClose}) {
           </Header>
           <Main>
             <LinkSection>
-              <LinkButton menu= 'mobile' href='files/cv-maria-bonete.pdf' download='cv-maria-bonete.pdf'>Download CV</LinkButton>
+              <LinkButton menu= 'mobile' href='files/cv-mariabonete.pdf' download='cv-mariabonete.pdf'>Download CV</LinkButton>
               <LinkButton menu= 'mobile' href='https://github.com/mbonete'>Github</LinkButton>
               <LinkButton menu= 'mobile' href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
             </LinkSection>
