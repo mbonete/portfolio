@@ -41,7 +41,7 @@ function Projects() {
           <ProjectDisclosed>
             
             <Introduction>
-              'The Gift Wizard' is an app that suggest the best gift ideas using AI!
+              Mago del Regalo (The Gift Wizard ) is an AI-powered app that eliminates the challenge of finding gift ideas, making the process effortless for you!            
             </Introduction>
           </ProjectDisclosed>
         </Grid>
@@ -124,9 +124,11 @@ const Wrapper = styled.div `
   display: flex;
   flex-direction: column;
   gap: 100px;
+  padding: 48px 0 172px 0;
 
   @media ${QUERIES.tabletAndSmaller} {
     gap: 20px;
+    padding: 0;
   }
 `;
 
@@ -137,7 +139,7 @@ const MaxWidthWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 32px 0;
+  padding-top: 32px;
 
   @media ${QUERIES.desktopAndSmaller} {
     max-width: 1100px;
@@ -296,7 +298,7 @@ const HomelyProjectWrapper = styled.div`
   margin: 0 auto;
   gap: 24px;
   max-width: 1400px;
-  padding: 56px 0;
+  padding: 0 0 56px 0;
 
   @media ${QUERIES.desktopAndSmaller} {
     max-width: 1100px;

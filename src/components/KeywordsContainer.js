@@ -13,6 +13,11 @@ const technologies = [
     logoSrc: 'img/logos/logo-js.svg',
   },
   {
+    name: 'TypeScript',
+    alt: 'TypeScript Logo',
+    logoSrc: 'img/logos/logo-typescript.svg',
+  },
+  {
     name: 'Node.js',
     alt: 'Node.js Logo',
     logoSrc: 'img/logos/logo-nodejs.svg',
