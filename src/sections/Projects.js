@@ -6,6 +6,8 @@ import {
   GitHub,
   Home,
   Key,
+  Star,
+  Gift,
 } from 'react-feather';
 import Subtitle from '../components/Subtitle';
 import { QUERIES, COLORS } from '../constants';
@@ -18,6 +20,69 @@ function Projects() {
         <Subtitle>Side Projects</Subtitle>
         <Grid>
           <Side>
+            <ProjectLinkTitle href='https://www.magodelregalo.com/' target='_blank' >
+              Mago del Regalo
+              <ExternalLink />
+            </ProjectLinkTitle>
+            <IconWrapper>
+              <Gift color={COLORS.sandYellow} size={80}/>
+              <Star color={COLORS.purpleBlue} size={80}/>
+            </IconWrapper>
+            <Source href='https://github.com/fcanela/regalos-ai' target='_blank'>
+                <GitHub size={'clamp(30px, 2vw, 50px)'} fontWeight={700}/>
+            </Source>
+          </Side>
+
+          <ProjectContainer href='https://www.magodelregalo.com/' target='_blank' rel="noreferrer">
+            <SVG src='img/ellipse.svg' alt='' draggable={false}/>
+            <SVG src='img/mobileSvgMago.svg' alt='A mobile showing the Mago del Regalo project' draggable={false}/>
+          </ProjectContainer>
+
+          <ProjectDisclosed>
+            
+            <Introduction>
+              'The Gift Wizard' is an app that suggest the best gift ideas using AI!
+            </Introduction>
+          </ProjectDisclosed>
+        </Grid>
+      </MaxWidthWrapper>
+
+
+      <HomelyProjectWrapper>
+        <ProjectLinkTitle href='https://github.com/mbonete/homely' target='_blank' >
+          Homely
+          <ExternalLink />
+        </ProjectLinkTitle>
+        <Introduction>
+          Minimal real estate platform that serves as a proof of concept for integration with a CRUD API, utilizing a range of libraries such as React, React Hook Forms, React Query, Axios, MaterialUI, and StyledComponents.
+        </Introduction> 
+        <VideoGrid>
+          <Side>
+            <IconWrapper>
+              <Home color={COLORS.purpleBlue} size={80} style={{marginTop: '180px'}}/>
+            </IconWrapper>
+          </Side>
+          
+          <VideoWrapper>
+            <video controls>
+              <source src='video/homely-trailer.mp4' type="video/mp4"/>
+            </video>
+          </VideoWrapper>
+          <Side>
+            <IconWrapper>
+              <Key color={COLORS.orangeRed} size={80} style={{marginTop: '180px'}}/>
+            </IconWrapper>
+            <Source href='https://github.com/mbonete/homely' target='_blank'>
+              <GitHub size={'clamp(30px, 2vw, 50px)'} fontWeight={700}/>
+            </Source>
+          </Side>
+        </VideoGrid> 
+ 
+      </HomelyProjectWrapper>
+
+      <MaxWidthWrapper>
+        <Grid>
+          <Side>
             <ProjectLinkTitle href='https://www.guess-the-bpm.com/' target='_blank' >
               Guess The BPM
               <ExternalLink />
@@ -28,17 +93,15 @@ function Projects() {
             </IconWrapper>
             <Source href='https://github.com/mbonete/guess-the-bpm' target='_blank'>
                 <GitHub size={'clamp(30px, 2vw, 50px)'} fontWeight={700}/>
-                Guess The BPM
             </Source>
           </Side>
 
           <ProjectContainer href='https://www.guess-the-bpm.com/' target='_blank' rel="noreferrer">
             <SVG src='img/ellipse.svg' alt='' draggable={false}/>
-            <SVG src='img/mobileSvg.svg' alt='A mobile showing the Guess The BPM project' draggable={false}/>
+            <SVG src='img/mobileSvgBPM.svg' alt='A mobile showing the Guess The BPM project' draggable={false}/>
           </ProjectContainer>
 
           <ProjectDisclosed>
-            
             <Introduction>
               A game in which the user reproduces a song, and tries to guess its beats per minute by taping a button rhythmically!
             </Introduction>
@@ -46,37 +109,6 @@ function Projects() {
         </Grid>
       </MaxWidthWrapper>
 
-      <HomelyProjectWrapper>
-        <ProjectLinkTitle href='https://github.com/mbonete/homely' target='_blank' >
-          Homely
-          <ExternalLink />
-        </ProjectLinkTitle>
-        <Introduction>
-          Minimal real estate platform that serves as a proof of concept for integration with a CRUD API, utilizing a range of libraries such as React, React Hook Forms, React Query, Axios, MaterialUI, and StyledComponents.
-        </Introduction>
-        
-        <VideoGrid>
-          
-          <VideoWrapper>
-            <video controls>
-              <source src='video/homely-trailer.mp4' type="video/mp4"/>
-            </video>
-          </VideoWrapper>
-          <Side>
-            <IconWrapper style={{marginTop: '50px'}}>
-              <Home color={COLORS.purpleBlue} size={80}/>
-              <Key color={COLORS.orangeRed} size={80}/>
-            </IconWrapper>
-            <Source href='https://github.com/mbonete/homely' target='_blank'>
-              <GitHub size={'clamp(30px, 2vw, 50px)'} fontWeight={700}/>
-              Homely
-            </Source>
-          </Side>
-        </VideoGrid>
-
-        
-        
-      </HomelyProjectWrapper>
       <Wave src='img/mustardWave.svg' alt='' draggable={false} />
     </Wrapper>
   );
@@ -89,7 +121,13 @@ const Wrapper = styled.div `
   height: fit-content;
   background-color: ${COLORS.mustardYellow};
   padding-bottom: 16px;
-  
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    gap: 20px;
+  }
 `;
 
 const MaxWidthWrapper = styled.div`
@@ -98,8 +136,8 @@ const MaxWidthWrapper = styled.div`
   max-width: 1400px;
   display: flex;
   flex-direction: column;
-
   margin: 0 auto;
+  padding: 32px 0;
 
   @media ${QUERIES.desktopAndSmaller} {
     max-width: 1100px;
@@ -113,16 +151,17 @@ const MaxWidthWrapper = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 450px;
+  grid-template-rows: 600px;
   height: 100%;
   width: 100%;
-  padding: 32px 0;
+  padding: 24px 0;
 
   @media ${QUERIES.tabletAndSmaller} {
     grid-template-columns: 100%;
     grid-template-rows: 60px 100px 500px;
     justify-items: center;
     gap: 16px;
+    padding: 16px 0;
     grid-template-areas:
     'title'
     'disclosure'
@@ -175,15 +214,18 @@ const ProjectLinkTitle = styled.a`
   justify-content: flex-start;
   gap: 8px;
   text-decoration: none;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   color: ${COLORS.primary};
   font-weight: 900;
 
   &:hover {
     text-decoration: revert;
   }
+  @media ${QUERIES.taabletAndSmaller} {
+    font-size: 2.35rem;
+  }
   @media ${QUERIES.phoneAndSmaller} {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -209,13 +251,14 @@ const Source = styled.a`
 `;
 
 const Introduction = styled.h3`
-  font-size: 1.25rem;
+  font-size: 1.65rem;
   line-height: 2.5;
   text-align: center;
 
   @media ${QUERIES.tabletAndSmaller} {
     font-size: 1rem;
     line-height: 2.25;
+    padding: 0 16px;
   }
 `;
 
@@ -247,21 +290,22 @@ const HomelyProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: fit-content;
   width: 100%;
-  margin: 64px auto;
+  margin: 0 auto;
   gap: 24px;
   max-width: 1400px;
+  padding: 56px 0;
 
   @media ${QUERIES.desktopAndSmaller} {
     max-width: 1100px;
-  
   }
+
   @media ${QUERIES.laptopAndSmaller} {
     max-width: 900px;
     padding: 16px;
-  
+    align-items: center;
   }
 
 `;
@@ -280,8 +324,8 @@ const VideoWrapper = styled.div`
 
 const VideoGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 100px;
-  justify-items: space-between;
+  grid-template-columns: 100px 1fr 100px;
+  justify-items: center;
   width: 100%;
 
   @media ${QUERIES.tabletAndSmaller} {

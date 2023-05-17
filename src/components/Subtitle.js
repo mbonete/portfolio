@@ -8,19 +8,25 @@ function Subtitle({children}) {
 }
 
 const Title = styled.h2`
-  font-size: clamp(1.25rem, 4.5vw, 3rem);
+  font-size: 3rem;
   line-height: 2;
+  
   &::first-letter {
     color: ${COLORS.primary};
     font-weight: 900;
-    font-size: clamp(2rem, 5vw, 3.15rem);
+    font-size: 3.15rem;
     text-shadow: 4px 0 black;
     margin-right: 4px;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
+    font-size: 1.65rem;
+    line-height: revert;
+
     &::first-letter {
       text-shadow: 2px 0 black;
+      font-size: 1.8rem;
+
     }
   }
 `;

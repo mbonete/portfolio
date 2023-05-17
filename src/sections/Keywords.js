@@ -31,6 +31,7 @@ const MaxWidthWrapper = styled.div`
   max-width: 1400px;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 
   margin: 0 auto;
 
@@ -39,7 +40,6 @@ const MaxWidthWrapper = styled.div`
   }
   @media ${QUERIES.laptopAndSmaller} {
     max-width: 900px;
-
   }
 `;
 
