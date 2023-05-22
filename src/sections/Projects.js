@@ -24,13 +24,10 @@ function Projects() {
               Mago del Regalo
               <ExternalLink />
             </ProjectLinkTitle>
-            <IconWrapper>
+            <IconWrapper style={{marginBottom: '100px'}}>
               <Gift color={COLORS.sandYellow} size={80}/>
               <Star color={COLORS.purpleBlue} size={80}/>
             </IconWrapper>
-            <Source href='https://github.com/fcanela/regalos-ai' target='_blank'>
-                <GitHub size={'clamp(30px, 2vw, 50px)'} fontWeight={700}/>
-            </Source>
           </Side>
 
           <ProjectContainer href='https://www.magodelregalo.com/' target='_blank' rel="noreferrer">
@@ -160,9 +157,9 @@ const Grid = styled.div`
 
   @media ${QUERIES.tabletAndSmaller} {
     grid-template-columns: 100%;
-    grid-template-rows: 60px 100px 500px;
+    grid-template-rows: 60px 120px 500px;
     justify-items: center;
-    gap: 16px;
+    gap: 24px;
     padding: 16px 0;
     grid-template-areas:
     'title'
