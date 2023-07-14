@@ -43,14 +43,14 @@ const technologies = [
     logoSrc: 'img/logos/logo-next.svg',
   },
   {
-    name: 'Python',
-    alt: 'Python Logo',
-    logoSrc: 'img/logos/logo-python.svg',
-  },
-  {
     name: 'Git',
     alt: 'Git Logo',
     logoSrc: 'img/logos/logo-git.svg',
+  },
+  {
+    name: 'Jest',
+    alt: 'Jest Logo',
+    logoSrc: 'img/logos/logo-jest.png',
   },
   {
     name: 'React Query',
@@ -61,6 +61,11 @@ const technologies = [
     name: 'SWR',
     alt: 'SWR Logo',
     logoSrc: 'img/logos/logo-swr.png'
+  },
+  {
+    name: 'Python',
+    alt: 'Python Logo',
+    logoSrc: 'img/logos/logo-python.svg',
   },
   {
     name: 'React Hook Form',
